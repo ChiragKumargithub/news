@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+{% if loggin %}
+body{
+    background-image: url("/static/images/pic1.jpg") ;
+ }
+ {% endif %}
+</style>   
+<body >
+
+    <header>
+        <div class="btn">
+            {% if loggin %}
+            <a href="{% url "logout" %}" class="btn btn-primary">Logout</a>
+            {% else %}
+            <a href="{% url "login" %}" class="btn btn-primary">Login</a>
+            <a href="{% url "register" %}" class="btn btn-primary">Register</a>
+            {% endif %}
+        </div>
+    </header>   
+    <hr> 
+    <h1>Welcom to news.ai</h1>
+    {% if loggin %}
+    <a href="{% url "news" %}">
+        <button>click here to explore latest news</button>
+    </a> 
+    {% endif %}
+      
+   {% comment %} {% for i  in regi  %}
+
+   <p>{{ i.username }}<p>
+    <p>{{ i.email }}<p>
+    <p>{{ i.mobile }}<p>
+    <p>{{ i.password }}<p>
+   {% endfor %}
+     {% endcomment %}
+
+</body>
+</html>
