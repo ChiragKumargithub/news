@@ -6,6 +6,42 @@
     <title>register</title>
 </head>
 <style>
+
+    .button-81 {
+        background-color: #fff;
+        border: 2px solid rgb(28, 230, 129);
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        color: #0d172a;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 1rem 1.6rem;
+        text-align: center;
+        text-decoration: none #0d172a solid;
+        text-decoration-thickness: auto;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        margin-top : 11px;
+      }
+      
+      .button-81:hover {
+        background-color: rgb(28, 230, 129);
+        color: #fff;
+      }
+      
+      @media (min-width: 768px) {
+        .button-81 {
+          font-size: 1.125rem;
+          padding: 1rem 2rem;
+        }
+      }
     /* Basic Styling */
 body {
     font-family: sans-serif;
@@ -50,7 +86,7 @@ input[type="password"] {
 }
 
 /* Button Styling */
-button {
+.register {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
@@ -61,7 +97,7 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+.register:hover {
     background-color: #3e8e41;
 }
 </style>    
@@ -69,8 +105,11 @@ button:hover {
     <header>
        
         <a href="{% url "home" %}">
-            <button>Home</button>
-        </a> 
+            <button class="button-81" role="button">Home</button>
+        </a>
+
+
+        <hr>
 
     </header>    
     <div class="container">
@@ -99,7 +138,7 @@ button:hover {
                     <input type="text" id="mobile" name="mobile" required>
                 </div>
 
-                <button type="submit">Register</button>
+                <button type="submit" class="register">Register</button>
             </form>
         </div>    
     </div>
