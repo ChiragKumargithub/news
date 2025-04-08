@@ -55,6 +55,19 @@
     <a href="{% url "logout" %}">
         <button class="button-81" role="button">Logout</button>
     </a>
+     
+    <div style="position: fixed; top: 13px; right: 10px; display: flex; align-items: center;">
+        <span style="margin-right: 12px; font-weight: 600; font-size: 20px"> {{data.username}}</span>
+        <img 
+            src="https://assets.codepen.io/5041378/internal/avatars/users/default.png" 
+            alt="Admin Avatar" 
+            style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #ccc; box-shadow: 0 0 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+            onmouseover="this.style.transform='scale(2)'" 
+            onmouseout="this.style.transform='scale(1)'"
+        >
+        
+    </div>
+
     {% else %}
     <a href="{% url "login" %}">
         <button class="button-81" role="button">Login</button>
